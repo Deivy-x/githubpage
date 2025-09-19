@@ -1,0 +1,618 @@
+/* Importación de fuentes y estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Parastoo:wght@400..700&display=swap');
+
+* {
+    cursor: url("cursor2.cur"), auto !important;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    border-bottom: double 5px rgba(255, 217, 0, 0.704);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 30px;
+}
+
+.logo img {
+    height: 80px;
+}
+
+.logo1 {
+    margin-right: 40px;
+}
+
+.logo2 {
+    margin-left: 40px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.institucion {
+    color: rgba(255, 217, 0, 0.704);
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 0 0 5px white;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.nombre {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-menu a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgba(255, 217, 0, 0.761);
+    transition: all 0.5s;
+}
+
+.nav-menu a:hover::before {
+    width: 100%;
+}
+
+/* Estilos del banner principal */
+.banner {
+    width: 100%;
+    height: 350px;
+    background-image: url('../imagenes/Escudo2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-content h1 {
+    font-size: 4rem;
+    color: #D4AF37;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Estilos del menú de modalidades */
+.modalidades-menu {
+    position: relative;
+    z-index: 5;
+    background-color: #f3f4f6;
+    padding-top: 20px;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: white;
+    border-radius: 40px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.menu-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-btn:hover {
+    transform: scale(1.1);
+    background: #d4af37;
+    color: white;
+}
+
+.menu-btn.selected {
+    background: #d4af37;
+    color: white;
+}
+
+/* Estilos para las páginas de cada modalidad (Informática, Diseño, etc.) */
+.modalidad-page-content {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 40px auto;
+    flex-wrap: wrap; 
+    overflow: hidden; 
+}
+
+.modalidad-info {
+    flex: 2;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modalidad-image-container {
+    flex: 1.5; 
+    background-color:#e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalidad-image-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.modalidad-header {
+    border-bottom: 3px solid #d4af37;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.sub-heading {
+    font-size: 0.9em;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.modalidad-info h2 {
+    font-size: 2.8em;
+    color: #d4af37;
+    margin: 5px 0 10px;
+}
+
+.modalidad-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.info-section {
+    margin-bottom: 30px;
+}
+
+.info-section h3 {
+    font-size: 1.8em;
+    color: #333;
+    border-left: 4px solid #d4af37;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.subjects-list {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.subjects-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.subjects-list li {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.subjects-list li::before {
+    content: '•';
+    color: #d4af37;
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+/* Pie de página */
+.footer {
+    background-color: black;
+    color: #eee;
+    padding: 40px 20px 10px;
+    font-family: sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-section {
+    margin: 20px;
+}
+
+.footer-section h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #eee;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.footer-section a img {
+    width: 40px;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+}
+
+.footer-section a:hover img {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .modalidad-page-content {
+        flex-direction: column;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .modalidad-image-container {
+        order: -1; 
+        border-radius: 15px 15px 0 0; 
+    }
+
+    .modalidad-info {
+        padding: 30px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 15px 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+
+    .logo-link {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        height: 60px;
+        margin: 0 5px;
+    }
+
+    .logo-text {
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu li {
+        margin: 5px 0;
+    }
+
+    .banner {
+        height: 250px;
+    }
+
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner-content p {
+        font-size: 1rem;
+    }
+
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        border-radius: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Estilos para la galería */
+.gallery-section { /* Se cambió el nombre de la clase para que coincida con el HTML */
+    background-color: black;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 2.5em;
+    color: #D4AF37;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #D4AF37;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    border: 2px solid #D4AF37;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ====== Lightbox ====== */
+#lightbox {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox.active {
+  display: flex;
+}
+
+#lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#lightbox-content img,
+#lightbox-content video {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+}
+
+/* Botón cerrar */
+.close-btn {
+    position: absolute;
+    top: 20px; /* Cambiado a 20px para que sea visible */
+    right: 30px; /* Separado del borde derecho para mejor visualización */
+    font-size: 32px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 10001; /* Asegura que esté por encima de otros elementos */
+}
+
+.close-btn:hover {
+  color: #ff4444;
+}
+
+/* Anula el cursor global para el lightbox */
+#lightbox * {
+    cursor: initial !important; 
+}
+
+/* Aplica el cursor de la lupa solo a los elementos de imagen */
+#lightbox-content img {
+    cursor: zoom-in;
+}
+
+/* Anula el cursor global para las imágenes dentro del lightbox */
+#lightbox-content img {
+    cursor: initial !important; /* Permite que el navegador decida el cursor */
+}
+
+/*solo la indormacion de las modalidades/*
+
+/* Estilos del encabezado principal de la sección */
+.intro-modalidades {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+}
+
+.intro-modalidades h1 {
+    font-size: 3rem;
+    color: #D4AF37;
+    margin-bottom: 10px;
+}
+
+.intro-modalidades p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.modalidades-text {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    padding: 0 20px;
+    text-align: justify;
+}
+
+.modalidades-text p {
+    margin-bottom: 20px;
+}
+
+/* Contenedor principal para todas las secciones de modalidad */
+.modalidades-container {
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+/* Estilos para las páginas de cada modalidad (Informática, Diseño, etc.) */
+.modalidad-page-content {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 40px auto;
+    flex-wrap: wrap; 
+    overflow: hidden; 
+}
+
+.modalidad-info {
+    flex: 2;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilos para los botones de navegación del carrusel */
+.prev-btn, .next-btn {
+    cursor: pointer !important;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px; /* Aumentado a 40px para un mayor tamaño */
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(255, 217, 0, 0.704);
+    /* Añadimos un margen para separarlos de la imagen */
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.prev-btn {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+    margin-left: 50px; /* Separación del borde izquierdo */
+}
+
+.next-btn {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    margin-right: 50px; /* Separación del borde derecho */
+}

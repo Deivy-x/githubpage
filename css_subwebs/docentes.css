@@ -1,0 +1,144 @@
+ * {
+  cursor: url("imagenes/cursor2.cur"), auto /* !important */;
+}
+ 
+ 
+ body {
+      margin: 0;
+      padding-top: 100px; /* Espacio para el header */
+      font-family: Arial, sans-serif;
+      /* cursor: url("imagenes/cursor\ \(1\).cur") 16 16, auto; */
+    }
+
+    header {
+      height: 100px;
+      background-color: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    border-bottom: double 5px rgba(255, 217, 0, 0.704);
+    position: fixed; /* para poder bajar con el nav */
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.logo img {
+    height: 80px; 
+    margin-right: 40px;
+
+}
+.logo1 {
+    margin-left: 0;
+}
+.logo2 {
+    margin-left: 40px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+span {
+    text-decoration: none;
+}
+
+.institucion {
+    color: rgba(255, 217, 0, 0.704);
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 0 0 5px /* rgba(255, 255, 255, 0.8) */   white; 
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+
+.nombre {
+    color: white;
+    font-weight: bold;
+    font-size: 14px; 
+    text-transform: uppercase;
+}
+
+
+.subweb {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.subweb li {
+    margin: 0 15px;
+    
+}
+
+.subweb a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.subweb a:hover {
+    color: #ccc;
+}
+
+/*
+.search-icon img {
+    height: 20px;
+    filter: invert(1);  Para que el icono sea blanco si es negro originalmente 
+}
+*/
+
+.subweb a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative; /* Necesario para el pseudo-elemento */
+  padding-bottom: 5px;
+}
+
+.subweb a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 217, 0, 0.761);
+  transition: all 0.5s;
+}
+
+.subweb a:hover::before {
+  width: 100%;
+}

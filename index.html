@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head-loader>
+
+        <!-- Loader -->
+<div id="loader">
+  <div class="loader-content">
+    <img src="imagenes/imagenescudo3.jpg" alt="Logo I.E." class="zoom-image">
+    <h2>Institución Educativa Integrado Carrasquilla Industrial</h2>
+    <p style="text-align: center;">Cargando...</p>
+    <div style="display: flex; justify-content: center;">
+  <img src="imagenes/pattern-19441_256.gif" alt="Cargando" style="width: 200px; margin-top: 2px;">
+</div>
+  </div>
+</div> 
+
+
+<!-- El resto de tu contenido va aquí -->
+<div id="main-content" style="display: none;">
+  <!-- Todo tu sitio aquí -->
+</div>
+
+
+    </head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>I.E. CARRASQUILLA INDUSTRIAL</title>
+        <link rel="stylesheet" href="css_subwebs/index.css">
+        <link rel="icon" href="imagenes_subweb/Escudo_dorado-removebg-preview.png">
+    </head>
+    <header>
+        <nav class="navbar";>
+            <div class="logo"><a class="logo" href="index.html">
+                <img class="logo1" src="imagenes/Escudo_dorado-removebg-preview.png" alt="Logo">
+                <div class="logo-text">
+                    <span class="institucion">INSTITUCIÓN EDUCATIVA</span>
+                    <span class="nombre">CARRASQUILLA Industrial</span>
+                </div>
+                <img class="logo2" src="imagenes/Escudo2.jpg" alt="Logo2"></a>  
+            </div>
+            <ul class="subweb">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Institucional.html">Institucional</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="Modalidades.html">Modalidades</a></li>
+                <li><a href="egresados.html">Egresados</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+            <div class="search-icon">
+                <!--img src="search-icon.png" alt="Buscar"-->
+            </div>
+        </nav>
+    </header>
+    <body>
+        <section class="video-container">
+            <video autoplay muted loop>
+                <source src="imagenes/video_carrasquilla.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">
+                <h1>Bienvenidos</h1>
+            </div>
+        </section>
+
+
+        <section class="noticias">
+            <h2>Noticias Destacadas</h2>
+            <p class="subtitle">Mantente informado sobre las últimas novedades de nuestra institución</p>
+
+            <div class="carrusel-container">
+                <div class="slides" id="slides">
+                        <!-- Slide 1 -->
+                    <div class="slide">
+                        <img src="imagenes/imagenescudo2.jpg" alt="Noticia 1">
+                    <div class="info-box">
+                        <h3>Proyecto Ambiental Escolar</h3>
+                        <p>El proyecto ambiental escolar ha sido seleccionado como finalista en el concurso nacional de proyectos educativos.</p>
+                        <button class="btn-leer">Leer más</button>
+                    </div>
+                </div>
+
+                    <!-- Slide 2 -->
+                <div class="slide">
+                        <img src="imagenes/imagenescudo2.jpg" alt="Noticia 2">
+                    <div class="info-box">
+                        <h3>Nuevo Laboratorio de Ciencias</h3>
+                        <p>La institución ha inaugurado un nuevo laboratorio de ciencias equipado con tecnología de punta para prácticas escolares.</p>
+                        <button class="btn-leer">Leer más</button>
+                    </div>
+                </div>
+
+                    <!-- Slide 3 -->
+                <div class="slide">
+                        <img src="imagenes/imagenescudo2.jpg" alt="Noticia 3">
+                    <div class="info-box">
+                        <h3>Campeonato Deportivo Estudiantil</h3>
+                        <p>Los estudiantes ganaron el campeonato regional de fútbol intercolegial por segundo año consecutivo.</p>
+                        <button class="btn-leer">Leer más</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles de flechas -->
+            <div class="controls">
+                <span class="arrow" onclick="prevSlide()">&#10094;</span>
+                <span class="arrow" onclick="nextSlide()">&#10095;</span>
+            </div>
+
+            <!-- Indicadores -->
+            <div class="dots" id="dots"></div>
+            </div>
+            <div class="centrar">
+                <a class="btn-ver-todas" href="Noticias.html">Ver todas las noticias</a>
+            </div>
+        </section>
+
+        <section class="accesos-rapidos">
+
+            <head-acceso-rapido>
+                <h2>Accesos Rápidos</h2>
+                <p>Directorios a nuestras plataformas institucionales.</p>
+            </head-acceso-rapido>
+
+
+                <div class="cards-container">
+                    <a target="_blank" href="https://www.sisga.com.co/saga/Autenticacion" class="card-link">
+                    <h3>SISGA ACADEMIC</h3>
+                    <img src="imagenes/informatica.png" alt="sisga">
+                    </a>
+                    <a target="_blank" href="#" class="card-link">
+                    <h3>P.E.I</h3>
+                    <img src="imagenes/gorra-de-posgrado.png" alt="sisga">
+                    </a>
+                    <a target="_blank" href="#" class="card-link">
+                    <h3>MANUAL DE CONVIVENCIA</h3>
+                    <img src="imagenes/manual-de-usuario.png" alt="sisga">
+                    </a>
+                    <a target="_blank" href="https://www.sisga.com.co/saga/Autenticacion" class="card-link">
+                    <h3>SISGA ACADEMIC</h3>
+                    <img src="imagenes/informatica.png" alt="sisga">
+                    </a>
+                    <!-- <a target="_blank" href="https://www.sisga.com.co/saga/Autenticacion" class="card-link">
+                    <h3>SISGA ACADEMIC</h3>
+                    <img src="imagenes/informatica.png" alt="sisga">
+                    </a>
+                    <a target="_blank" href="https://www.sisga.com.co/saga/Autenticacion" class="card-link">
+                    <h3>SISGA ACADEMIC</h3>
+                    <img src="imagenes/informatica.png" alt="sisga">
+                    </a>
+                    <a target="_blank" href="https://www.sisga.com.co/saga/Autenticacion" class="card-link">
+                    <h3>SISGA ACADEMIC</h3>
+                    <img src="imagenes/informatica.png" alt="sisga">
+                    </a>
+                    <a target="_blank" href="https://www.sisga.com.co/saga/Autenticacion" class="card-link">
+                    <h3>SISGA ACADEMIC</h3>
+                    <img src="imagenes/informatica.png" alt="sisga">
+                    </a>
+ -->
+
+                    <!-- Repite más tarjetas según necesites -->
+                </div>
+                </div>
+        </section>
+
+       <section class="modalidades">
+        <h2>Nuestras Modalidades</h2>
+        <p style="text-align: center; color: #666;">Conoce las diferentes opciones de formación que ofrecemos</p>
+
+        <div class="box-modalidades">
+        <div class="card-modalidad">
+            <img src="imagenes/diseño.png" alt="Diseño Gráfico">
+            <h3>Diseño Gráfico</h3>
+            <p>Formación técnica en diseño y comunicación visual.</p>
+            <a href="diseño.html">Conocer más</a>
+        </div>
+        <div class="card-modalidad">
+            <img src="imagenes/idioma.png" alt="Bilingüismo">
+            <h3>Bilingüismo</h3>
+            <p>Énfasis en el dominio del inglés como segunda lengua.</p>
+            <a href="bilinguismo.html">Conocer más</a>
+        </div>
+        <div class="card-modalidad">
+            <img src="imagenes/informatica (1).png" alt="Informática">
+            <h3>Informática</h3>
+            <p>Tecnologías de la información y la comunicación.</p>
+            <a href="Informatica.html">Conocer más</a>
+        </div>
+        <div class="card-modalidad">
+            <img src="imagenes/ciencias.png" alt="Ciencias Naturales">
+            <h3>Ciencias Naturales</h3>
+            <p>Formación en biología, física y química.</p>
+            <a href="ciencias.html">Conocer más</a>
+        </div>
+    </section>
+  
+       <!-- Carrusel de enlaces -->
+    <section id="enlaces-interes-carousel" class="carousel-wrapper auto-scroll sin-espacio">
+
+        <div class="carousel-track auto-track">
+            <div class="carousel-item"><a href="https://www.quibdo-choco.gov.co/" target="_blank"><img src="imagenes/quibdo.jpg" alt="Alcaldía de Quibdó"></a></div>
+            <div class="carousel-item"><a href="https://www.mintic.gov.co/portal/inicio/" target="_blank"><img src="imagenes/logo-mintic.jpg" alt="MinTIC"></a></div>
+            <div class="carousel-item"><a href="https://www.colombiaaprende.edu.co/" target="_blank"><img src="imagenes/logo_colombia_aprende.png" alt="Colombia Aprende"></a></div>
+            <div class="carousel-item"><a href="https://www.icfes.gov.co/" target="_blank"><img src="imagenes/LOGO-ICFES.png" alt="ICFES"></a></div>
+            <div class="carousel-item"><a href="https://colombia.co" target="_blank"><img src="imagenes/logo_cooo.jpg" alt="Colombia"></a></div>
+            <div class="carousel-item"><a href="https://www.mineducacion.gov.co/" target="_blank"><img src="imagenes/logo-mini-educacion.png" alt="Ministerio de Educación"></a></div>
+            <div class="carousel-item"><a href="https://www.choco.gov.co/" target="_blank"><img src="imagenes/Logo-_gob-choco.png" alt="Gobernación del Chocó"></a></div>
+            <div class="carousel-item"><a href="https://www.sena.edu.co/" target="_blank"><img src="imagenes/logo-sena.jpeg" alt="SENA"></a></div>
+            <div class="carousel-item"><a href="https://enamoratedelchoco.co/" target="_blank"><img src="imagenes/Logo-Enamorate-del-chcoco-web-768x638.png" alt="Enamorate del Choco"></a></div>
+            <div class="carousel-item"><a href="https://www.quibdo-choco.gov.co/" target="_blank"><img src="imagenes/quibdo.jpg" alt="Alcaldía de Quibdó"></a></div>
+            <div class="carousel-item"><a href="https://www.mintic.gov.co/portal/inicio/" target="_blank"><img src="imagenes/logo-mintic.jpg" alt="MinTIC"></a></div>
+            <div class="carousel-item"><a href="https://www.colombiaaprende.edu.co/" target="_blank"><img src="imagenes/logo_colombia_aprende.png" alt="Colombia Aprende"></a></div>
+            <div class="carousel-item"><a href="https://www.icfes.gov.co/" target="_blank"><img src="imagenes/LOGO-ICFES.png" alt="ICFES"></a></div>
+            <div class="carousel-item"><a href="https://colombia.co" target="_blank"><img src="imagenes/logo_cooo.jpg" alt="Colombia"></a></div>
+            <div class="carousel-item"><a href="https://www.mineducacion.gov.co/" target="_blank"><img src="imagenes/logo-mini-educacion.png" alt="Ministerio de Educación"></a></div>
+            <div class="carousel-item"><a href="https://www.choco.gov.co/" target="_blank"><img src="imagenes/Logo-_gob-choco.png" alt="Gobernación del Chocó"></a></div>
+            <div class="carousel-item"><a href="https://www.sena.edu.co/" target="_blank"><img src="imagenes/logo-sena.jpeg" alt="SENA"></a></div>
+            <div class="carousel-item"><a href="https://enamoratedelchoco.co/" target="_blank"><img src="imagenes/Logo-Enamorate-del-chcoco-web-768x638.png" alt="Enamorate del Choco"></a></div>
+            <div class="carousel-item"><a href="https://www.quibdo-choco.gov.co/" target="_blank"><img src="imagenes/quibdo.jpg" alt="Alcaldía de Quibdó"></a></div>
+            <div class="carousel-item"><a href="https://www.mintic.gov.co/portal/inicio/" target="_blank"><img src="imagenes/logo-mintic.jpg" alt="MinTIC"></a></div>
+            <div class="carousel-item"><a href="https://www.colombiaaprende.edu.co/" target="_blank"><img src="imagenes/logo_colombia_aprende.png" alt="Colombia Aprende"></a></div>
+            <div class="carousel-item"><a href="https://www.icfes.gov.co/" target="_blank"><img src="imagenes/LOGO-ICFES.png" alt="ICFES"></a></div>
+            <div class="carousel-item"><a href="https://colombia.co" target="_blank"><img src="imagenes/logo_cooo.jpg" alt="Colombia"></a></div>
+            <div class="carousel-item"><a href="https://www.mineducacion.gov.co/" target="_blank"><img src="imagenes/logo-mini-educacion.png" alt="Ministerio de Educación"></a></div>
+            <div class="carousel-item"><a href="https://www.choco.gov.co/" target="_blank"><img src="imagenes/Logo-_gob-choco.png" alt="Gobernación del Chocó"></a></div>
+            <div class="carousel-item"><a href="https://www.sena.edu.co/" target="_blank"><img src="imagenes/logo-sena.jpeg" alt="SENA"></a></div>
+            <div class="carousel-item"><a href="https://enamoratedelchoco.co/" target="_blank"><img src="imagenes/Logo-Enamorate-del-chcoco-web-768x638.png" alt="Enamorate del Choco"></a></div>
+            <div class="carousel-item"><a href="https://www.quibdo-choco.gov.co/" target="_blank"><img src="imagenes/quibdo.jpg" alt="Alcaldía de Quibdó"></a></div>
+            <div class="carousel-item"><a href="https://www.mintic.gov.co/portal/inicio/" target="_blank"><img src="imagenes/logo-mintic.jpg" alt="MinTIC"></a></div>
+            <div class="carousel-item"><a href="https://www.colombiaaprende.edu.co/" target="_blank"><img src="imagenes/logo_colombia_aprende.png" alt="Colombia Aprende"></a></div>
+            <div class="carousel-item"><a href="https://www.icfes.gov.co/" target="_blank"><img src="imagenes/LOGO-ICFES.png" alt="ICFES"></a></div>
+            <div class="carousel-item"><a href="https://colombia.co" target="_blank"><img src="imagenes/logo_cooo.jpg" alt="Colombia"></a></div>
+            <div class="carousel-item"><a href="https://www.mineducacion.gov.co/" target="_blank"><img src="imagenes/logo-mini-educacion.png" alt="Ministerio de Educación"></a></div>
+            <div class="carousel-item"><a href="https://www.choco.gov.co/" target="_blank"><img src="imagenes/Logo-_gob-choco.png" alt="Gobernación del Chocó"></a></div>
+            <div class="carousel-item"><a href="https://www.sena.edu.co/" target="_blank"><img src="imagenes/logo-sena.jpeg" alt="SENA"></a></div>
+            <div class="carousel-item"><a href="https://enamoratedelchoco.co/" target="_blank"><img src="imagenes/Logo-Enamorate-del-chcoco-web-768x638.png" alt="Enamorate del Choco"></a></div>
+        </div>
+    </section>
+
+  <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section contact">
+      <h3>Contáctanos</h3>
+      <p>Email: ejempl@outlook.com</p>
+      <p>Tel: +57 313 333 3333</p>
+      <p>Dirección: Carrea #@ calle @, quibdo-choco</p>
+    </div>
+    <div class="footer-section social">
+      <h3>Síguenos</h3>
+      <a href="#"><img src="imagenes/facebook_.png" alt="Facebook" /></a>
+      <a href="#"><img src="imagenes/ig.png" alt="Instagram" /></a>
+      <a href="#"><img src="imagenes/youtube.png" alt="Twitter" /></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy;2025 I.E.CARRASQUILLA.I. | Todos los derechos reservados.
+  </div>
+</footer>
+
+        <script src="js/index.js"></script>
+
+    </body>
+</html>
