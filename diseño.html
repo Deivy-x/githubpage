@@ -5,32 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diseño Gráfico - I.E. CARRASQUILLA INDUSTRIAL</title>
   <link rel="stylesheet" href="css_subwebs/modalidades.css">
+  <link rel="stylesheet" href="css_subwebs/all_subw.css">
   <link rel="icon" href="imagenes/Escudo_dorado-removebg-preview.png">
 </head>
 <body>
 
   <!-- ====== Encabezado ====== -->
   <header class="main-header">
-    <nav class="navbar">
-      <div class="logo">
-        <a class="logo-link" href="index.html">
-          <img class="logo1" src="imagenes_subweb/Escudo_dorado-removebg-preview copy.png" alt="Logo principal">
-          <div class="logo-text">
-            <span class="institucion">INSTITUCIÓN EDUCATIVA</span>
-            <span class="nombre">CARRASQUILLA Industrial</span>
-          </div>
-          <img class="logo2" src="imagenes/Escudo2.jpg" alt="Logo alterno">
-        </a>
-      </div>
-      <ul class="nav-menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="Institucional.html">Institucional</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="Modalidades.html">Modalidades</a></li>
-        <li><a href="egresados.html">Egresados</a></li>
-        <li><a href="contactos.html">Contactos</a></li>
-      </ul>
-    </nav>
+            <nav class="navbar">
+                <div class="logo">
+                    <a class="logo" href="index.html">
+                        <img class="logo1" src="imagenes/Escudo_dorado-removebg-preview.png" alt="Logo">
+                        <div class="logo-text">
+                            <span class="institucion">INSTITUCIÓN EDUCATIVA</span>
+                            <span class="nombre">CARRASQUILLA Industrial</span>
+                        </div>
+                        <img class="logo2" src="imagenes/Escudo2.jpg" alt="Logo2">
+                    </a>
+                
+                
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="subweb" id="subweb">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Institucional.html">Institucional</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="Modalidades.html">Modalidades</a></li>
+                    <li><a href="egresados.html">Egresados</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
   </header>
 
   <!-- ====== Banner ====== -->
@@ -135,6 +143,9 @@
         <a href="imagenes/Un EXPOSICIÓN de DISEÑO para DISEÑO Un encuentro entre los dos 10s d e la modalidad diseño para .mp4" class="gallery-item" data-type="video">
             <img src="imagenes/expo-de-diseño.png" alt="Miniatura del video">
         </a>
+        <a href="imagenes/Colegio-blanco-y-negro.jpg" class="gallery-item" data-type="image">
+            <img src="imagenes/Colegio-blanco-y-negro.jpg" alt="Descripción de la imagen">
+        </a>
     </div>
 </section>
 
@@ -169,6 +180,7 @@
 
   <!-- ====== Scripts ====== -->
   <script src="js/modalidades.js"></script>
+  <script src="js/all.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const menuButtons = document.querySelectorAll('.modalidades-menu .menu-btn');

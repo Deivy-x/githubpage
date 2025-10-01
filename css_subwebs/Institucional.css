@@ -355,6 +355,7 @@ body {
 
     .banner {
         height: 250px;
+        z-index: 1;
     }
 
     .banner-content h1 {
@@ -380,3 +381,356 @@ body {
         align-items: center;
     }
 }
+
+
+/* === MENÚ HAMBURGUESA === */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: rgba(255, 217, 0, 0.704);
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Animación del menú hamburguesa */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/* === MEDIA QUERIES === */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+    
+    .logo {
+        padding-left: 15px;
+    }
+    
+    .logo img {
+        height: 60px;
+        margin-right: 20px;
+    }
+    
+    .logo2 {
+        margin-left: 20px;
+    }
+    
+    .institucion {
+        font-size: 10px;
+        padding-left: 10px;
+    }
+    
+    .nombre {
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .subweb {
+        position: fixed;
+        top: 100px;
+        right: -100%;
+        width: 250px;
+        height: calc(100vh - 100px);
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        padding: 20px 0;
+        transition: right 0.3s ease;
+        border-left: 3px solid rgba(255, 217, 0, 0.704);
+    }
+    
+    .subweb.active {
+        right: 0;
+    }
+    
+    .subweb li {
+        margin: 15px 0;
+        text-align: center;
+    }
+    
+    .subweb a {
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+    }
+    
+    .video-overlay h1 {
+        font-size: 3rem;
+    }
+    
+    .slide img {
+        height: 250px;
+    }
+    
+    .info-box p {
+        padding: 0 20px;
+    }
+    
+    .arrow {
+        font-size: 24px;
+        padding: 3px 8px;
+    }
+    
+    .cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        padding: 15px;
+    }
+    
+    .box-modalidades {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Móvil */
+@media (max-width: 480px) {
+    body {
+        padding-top: 80px;
+    }
+    
+    .navbar {
+        height: 80px;
+        padding: 8px 10px;
+    }
+    
+    header {
+        height: 80px;
+    }
+    
+    .logo {
+        padding-left: 5px;
+    }
+    
+    .logo img {
+        height: 50px;
+        margin-right: 15px;
+    }
+    
+    .logo2 {
+        margin-left: 15px;
+    }
+    
+    .institucion {
+        font-size: 8px;
+        padding-left: 5px;
+    }
+    
+    .nombre {
+        font-size: 10px;
+        padding-left: 5px;
+    }
+    
+    .menu-toggle {
+        padding: 5px;
+    }
+    
+    .menu-toggle span {
+        width: 20px;
+        height: 2px;
+    }
+    
+    .subweb {
+        top: 80px;
+        height: calc(100vh - 80px);
+        width: 200px;
+    }
+    
+    .video-container {
+        height: 30vh;
+    }
+    
+    .video-overlay h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 24px;
+        margin: 20px 0 10px 0;
+    }
+    
+    .slide img {
+        height: 200px;
+    }
+    
+    .info-box {
+        padding: 15px;
+        min-height: 80px;
+    }
+    
+    .info-box p {
+        padding: 0 10px;
+        font-size: 13px;
+    }
+    
+    .arrow {
+        font-size: 20px;
+        padding: 2px 6px;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .card-link {
+        height: 140px;
+        padding: 10px;
+    }
+    
+    .card-link img {
+        width: 80px;
+    }
+    
+    .card-link h3 {
+        font-size: 12px;
+    }
+    
+    .box-modalidades {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .card-modalidad {
+        max-width: 100%;
+        padding: 15px;
+    }
+    
+    .card-modalidad img {
+        height: 100px;
+    }
+    
+    .carousel-item {
+        width: 120px;
+        height: 60px;
+    }
+    
+    .footer {
+        padding: 20px 10px 10px;
+    }
+    
+    .footer-section a img {
+        width: 40px;
+        margin-right: 5px;
+    }
+}
+
+/* Muy pequeño (menos de 360px) */
+@media (max-width: 360px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .video-overlay h1 {
+        font-size: 1.5rem;
+    }
+    
+    .info-box h3 {
+        font-size: 16px;
+    }
+    
+    .info-box p {
+        font-size: 12px;
+    }
+}
+
+/* === HEADER Y NAVEGACIÓN === */
+header {
+    height: 100px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    border-bottom: double 5px rgba(255, 217, 0, 0.704);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+/* === LOGO === */
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 80px;
+    margin-right: 40px;
+}
+
+.logo1 {
+    margin-left: 0;
+}
+
+.logo2 {
+    margin-left: 40px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.institucion {
+    color: rgba(255, 217, 0, 0.704);
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 0 0 5px white;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.nombre {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+

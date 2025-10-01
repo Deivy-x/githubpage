@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ciencias Naturales - I.E. CARRASQUILLA INDUSTRIAL</title>
     <link rel="stylesheet" href="css_subwebs/modalidades.css">
+    <link rel="stylesheet" href="css_subwebs/all_subw.css">
     <link rel="icon" href="imagenes_subweb/Escudo_dorado-removebg-preview.png">
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -14,27 +15,34 @@
 <body>
 
     <header class="main-header">
-        <nav class="navbar">
-            <div class="logo">
-                <a class="logo-link" href="index.html">
-                    <img class="logo1" src="imagenes_subweb/Escudo_dorado-removebg-preview copy.png" alt="Logo">
-                    <div class="logo-text">
-                        <span class="institucion">INSTITUCIÓN EDUCATIVA</span>
-                        <span class="nombre">CARRASQUILLA Industrial</span>
-                    </div>
-                    <img class="logo2" src="imagenes_subweb/Escudo2.jpg" alt="Logo2">
-                </a> 
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="Institucional.html">Institucional</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="Modalidades.html">Modalidades</a></li>
-                <li><a href="egresados.html">Egresados</a></li>
-                <li><a href="contactos.html">Contactos</a></li>
-            </ul>
-        </nav>
-    </header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a class="logo" href="index.html">
+                        <img class="logo1" src="imagenes/Escudo_dorado-removebg-preview.png" alt="Logo">
+                        <div class="logo-text">
+                            <span class="institucion">INSTITUCIÓN EDUCATIVA</span>
+                            <span class="nombre">CARRASQUILLA Industrial</span>
+                        </div>
+                        <img class="logo2" src="imagenes/Escudo2.jpg" alt="Logo2">
+                    </a>
+                
+                
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="subweb" id="subweb">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Institucional.html">Institucional</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="Modalidades.html">Modalidades</a></li>
+                    <li><a href="egresados.html">Egresados</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </nav>
+  </header>
 
     <section class="banner">
         <div class="banner-content">
@@ -161,6 +169,7 @@
     </footer>
     
     <script src="js/modalidades.js"></script>
+    <script src="js/all.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const menuButtons = document.querySelectorAll('.modalidades-menu .menu-btn');

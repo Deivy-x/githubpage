@@ -1,66 +1,115 @@
-/* loader 
-  window.addEventListener("load", function () {
-    const loader = document.getElementById("loader");
-    const content = document.getElementById("main-content");
+document.addEventListener("DOMContentLoaded", function() {
+    // === Loader ===
+    window.addEventListener('load', function() {
+        const loader = document.getElementById('loader');
+        const mainContent = document.getElementById('main-content');
+        if (loader) {
+            loader.style.display = 'none';
+        }
+        if (mainContent) {
+            mainContent.style.display = 'block';
+        }
+    });
 
-    loader.style.display = "none";
-    content.style.display = "block";
-  });
+    // === Carrusel de Noticias ===
+    const slides = document.getElementById('slides');
+    const dotsContainer = document.getElementById('dots');
+    const slideElements = document.querySelectorAll('.slide');
+    let currentIndex = 0;
 
-/* Hasta Aquí */
+    function updateCarousel() {
+        const offset = -currentIndex * 100;
+        slides.style.transform = `translateX(${offset}%)`;
+        updateDots();
+    }
 
+    function createDots() {
+        dotsContainer.innerHTML = '';
+        slideElements.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (index === 0) {
+                dot.classList.add('active');
+            }
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+            dotsContainer.appendChild(dot);
+        });
+    }
 
+    function updateDots() {
+        const dots = document.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
 
-  window.addEventListener("load", function () {
-    var loader = document.getElementById("loader");
-    var content = document.getElementById("main-content");
+    window.nextSlide = function() {
+        currentIndex = (currentIndex + 1) % slideElements.length;
+        updateCarousel();
+    };
 
-    if (loader) loader.style.display = "none";
-    if (content) content.style.display = "block";
-  });
- 
+    window.prevSlide = function() {
+        currentIndex = (currentIndex - 1 + slideElements.length) % slideElements.length;
+        updateCarousel();
+    };
 
+    createDots();
+    updateCarousel();
 
-const slides = document.getElementById("slides");
-  const dotsContainer = document.getElementById("dots");
-  const totalSlides = slides.children.length;
-  let currentIndex = 0;
-  let interval = setInterval(nextSlide, 5000); // Cambia cada 5s
+    // --- Movimiento automático del carrusel ---
+    setInterval(() => {
+        nextSlide();
+    }, 3000); // cada 5 segundos
 
-  // Crear los puntos
-  for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement("div");
-    dot.classList.add("dot");
-    if (i === 0) dot.classList.add("active");
-    dot.addEventListener("click", () => goToSlide(i));
-    dotsContainer.appendChild(dot);
-  }
+    // === Carrusel de Logos ===
+    const track = document.querySelector('.auto-track');
+    if (track) {
+        const items = Array.from(track.children);
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            track.appendChild(clone);
+        });
+    }
 
-  function updateDots(index) {
-    const dots = document.querySelectorAll(".dot");
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[index].classList.add("active");
-  }
+    // === Menú Hamburguesa ===
+    const menuToggle = document.getElementById('menu-toggle');
+    const subweb = document.getElementById('subweb');
 
-  function goToSlide(index) {
-    currentIndex = index;
-    slides.style.transform = `translateX(-${index * 100}%)`;
-    updateDots(index);
-    resetInterval();
-  }
+    if (menuToggle && subweb) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            subweb.classList.toggle('active');
+        });
 
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    goToSlide(currentIndex);
-  }
+        document.querySelectorAll('.subweb a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    menuToggle.classList.remove('active');
+                    subweb.classList.remove('active');
+                }
+            });
+        });
+    }
+});
 
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    goToSlide(currentIndex);
-  }
+/* // === Animaciones dinámicas al hacer scroll ===
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("scroll-animate");
+                observer.unobserve(entry.target); // Evita que se repita
+            }
+        });
+    }, { threshold: 0.2 });
 
-  function resetInterval() {
-    clearInterval(interval);
-    interval = setInterval(nextSlide, 5000);
-  }
-
+    // Selecciona secciones, títulos, tarjetas, etc.
+    const elements = document.querySelectorAll(
+        "section, .card-modalidad, .card-link, .slide, h2, p, .logo"
+    );
+    elements.forEach(el => observer.observe(el));
+});
+ */

@@ -22,6 +22,7 @@ body {
       left: 0;
       width: 100%;
       z-index: 2;
+
     }
 
     .navbar {
@@ -319,6 +320,115 @@ section.info-section p {
                 padding: 18px 6px;
             }
         }
+
+
+        /* 📱 MÓVIL */
+@media (max-width: 600px) {
+  header {
+    height: 70px;
+  }
+
+  .logo img {
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .institucion {
+    font-size: 10px;
+    padding-left: 10px;
+  }
+
+  .nombre {
+    font-size: 12px;
+  }
+
+  .subweb {
+    flex-direction: column; /* Menú en columna */
+    align-items: center;
+    gap: 8px;
+  }
+
+  .subweb a {
+    font-size: 12px;
+  }
+
+  section.info-section h1 {
+    font-size: 1.4rem;
+  }
+
+  section.info-section p {
+    font-size: 0.9rem;
+  }
+
+  .login-container {
+    max-width: 95vw;
+    padding: 20px 15px;
+  }
+
+  .login-form h2 {
+    font-size: 1.3rem;
+  }
+
+  button[type="submit"],
+  .contact-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  .login-section {
+  max-width: 360px;
+  margin: 0 auto;   /* <-- centra horizontalmente */
+}
+
+}
+
+/* 📱💻 TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+  header {
+    height: 85px;
+  }
+
+  .logo img {
+    height: 65px;
+    margin-right: 20px;
+  }
+
+  .institucion {
+    font-size: 11px;
+  }
+
+  .nombre {
+    font-size: 13px;
+  }
+
+  .subweb a {
+    font-size: 13px;
+  }
+
+  section.info-section h1 {
+    font-size: 1.7rem;
+  }
+
+  section.info-section p {
+    font-size: 1rem;
+  }
+
+  .login-container {
+    max-width: 80vw;
+    padding: 30px 20px;
+  }
+
+  .login-form h2 {
+    font-size: 1.5rem;
+  }
+
+  button[type="submit"],
+  .contact-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+/* 💻 PC (ya lo tienes bien, no hace falta tocar nada extra) */
 
 
         

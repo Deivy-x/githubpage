@@ -171,6 +171,7 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     margin: 20px auto;
     width: fit-content;
+   
 }
 
 .menu-btn {
@@ -616,3 +617,160 @@ body {
     border-radius: 3px 0 0 3px;
     margin-right: 50px; /* Separación del borde derecho */
 }
+
+/* prueba */
+/* Tablet (hasta 1024px) */
+@media (max-width: 1024px) {
+  .banner {
+    height: 280px;
+  }
+  .banner-content h1 {
+    font-size: 2.8rem;
+  }
+  .banner-content p {
+    font-size: 1.1rem;
+  }
+  .nav-menu a {
+    font-size: 13px;
+  }
+  .modalidad-info {
+    padding: 40px 25px;
+  }
+  .gallery-title {
+    font-size: 2rem;
+  }
+}
+
+/* Móviles grandes (hasta 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo img {
+    height: 55px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .banner {
+    height: 220px;
+  }
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+  .banner-content p {
+    font-size: 0.9rem;
+  }
+
+  .modalidad-page-content {
+    flex-direction: column;
+    margin: 20px;
+    box-shadow: none;
+  }
+  .modalidad-info {
+    padding: 25px;
+  }
+
+  .menu-container {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 15px;
+    
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+  .menu-container {
+     max-width: 360px;
+  }
+
+   .prev-btn, .next-btn {
+    font-size: 28px;       /* más pequeñas */
+    padding: 10px;         /* menos relleno */
+    margin-left: 15px;     /* menos separación */
+    margin-right: 15px;
+    z-index: 1000;
+  }
+  .gallery-container {
+    max-width: 290px;
+}
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px;
+  }
+  .logo img {
+    height: 45px;
+  }
+  .institucion {
+    font-size: 10px;
+  }
+  .nombre {
+    font-size: 12px;
+  }
+
+  .banner {
+    height: 180px;
+    padding-top: 70px;
+  }
+  .banner-content h1 {
+    font-size: 1.6rem;
+  }
+  .banner-content p {
+    font-size: 0.8rem;
+  }
+
+  .modalidad-info h2 {
+    font-size: 1.8em;
+  }
+  .info-section h3 {
+    font-size: 1.3em;
+  }
+  .modalidad-info p,
+  .subjects-list li {
+    font-size: 0.95em;
+  }
+
+  .gallery-title {
+    font-size: 1.5em;
+  }
+
+  .footer {
+    padding: 20px 10px;
+  }
+  .footer-section p,
+  .footer-section a {
+    font-size: 12px;
+  }
+  .footer-bottom {
+    font-size: 12px;
+  }
+  .intro-modalidades p {
+    font-size: 15px;
+  }
+  .menu-container {
+     max-width: 360px;
+  }
+   .prev-btn, .next-btn {
+    font-size: 22px;       /* todavía más pequeñas en móviles pequeños */
+    padding: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 1000;
+  }
+  .gallery-container {
+    max-width: 290px;
+}
+}
+
+
